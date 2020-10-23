@@ -4,7 +4,7 @@ RestAPI is created which can perform CRUD operations using flask framework.
 ## How to test RestAPI
 Following are the steps to be followed to make API calls.
 
-1.Download the code using clone/Download button from source repository
+1. Download the code using clone/Download button from source repository
 2. install all necessary libraries using requirements.txt file
 3. run app.py file
 4. I have tested my RestAPI using [reqbin](https://reqbin.com/)
@@ -27,5 +27,5 @@ For example,
   "Name":"Maggie"
 }
 ```
-4.[Get Items](http://127.0.0.1:5000/get_item/1): This call will list all items present in cart_1 as '1' is passed in link. Same way any cart details can be accessed by changing the number in link.
+4. [Get Items](http://127.0.0.1:5000/get_item/1): This call will list all items present in cart_1 as '1' is passed in link. Same way any cart details can be accessed by changing the number in link.
 
