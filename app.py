@@ -22,7 +22,7 @@ def get_item(id):
     col = db['cart_'+str(id)]
     output = []
     for s in col.find():
-        output.append({'Name': s['Name'], 'Price': s['Price'], 'Ingredients':s['Ingredients']})
+        output.append({'Name': s['Name'], 'Price': s['Price'], 'Quantity':s['Quantity']})
     return jsonify({'result': output})
 
 
@@ -30,8 +30,8 @@ def get_item(id):
 def add_item(id):
     name = request.json['Name']
     price = request.json['Price']
-    igd = request.json['Ingredients']
-    x = db['cart_' + str(id)].insert({'Name': name, 'Price': price, 'Ingredients': igd})
+    igd = request.json['Quantity']
+    x = db['cart_' + str(id)].insert({'Name': name, 'Price': price, 'Quantity': igd})
     return "item got successfully added to cart"
 
 
