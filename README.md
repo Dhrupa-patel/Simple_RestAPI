@@ -10,8 +10,8 @@ Following are the steps to be followed to make API calls.
 4. I have tested my RestAPI using [reqbin](https://reqbin.com/)
 
 Following are the four queries that can be performed using this RestAPI.
-1. [Create_cart](http://127.0.0.1:5000/create_cart): This will create new collection in database. I have stored my data in Mongodb Database.
-2. [Add Item](http://127.0.0.1:5000/add_item/1): This call will add data to cart_1 as '1' is passed in link. User need to send json object using reqbin tool.
+1. Create_cart (http://127.0.0.1:5000/create_cart): This will create new collection in database. I have stored my data in Mongodb Database.
+2. Add Item (http://127.0.0.1:5000/add_item/1): This call will add data to cart_1 as '1' is passed in link. User need to send json object using reqbin tool.
 For example, 
 ```
 {
@@ -21,11 +21,11 @@ For example,
 }
 
 ```
-3. [Delete Item](http://127.0.0.1:5000/add_item/1): This call will delete matching data from cart_1 as '1' is passed in link. 
+3. Delete Item (http://127.0.0.1:5000/add_item/1): This call will delete matching data from cart_1 as '1' is passed in link. 
 ```
 {
   "Name":"Maggie"
 }
 ```
-4. [Get Items](http://127.0.0.1:5000/get_item/1): This call will list all items present in cart_1 as '1' is passed in link. Same way any cart details can be accessed by changing the number in link.
+4. Get Items (http://127.0.0.1:5000/get_item/1): This call will list all items present in cart_1 as '1' is passed in link. Same way any cart details can be accessed by changing the number in link.
 
