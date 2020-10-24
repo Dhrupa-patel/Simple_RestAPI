@@ -30,8 +30,8 @@ def get_item(id):
 def add_item(id):
     name = request.json['Name']
     price = request.json['Price']
-    igd = request.json['Quantity']
-    x = db['cart_' + str(id)].insert({'Name': name, 'Price': price, 'Quantity': igd})
+    quantity = request.json['Quantity']
+    x = db['cart_' + str(id)].insert({'Name': name, 'Price': price, 'Quantity': quantity})
     return "item got successfully added to cart"
 
 
@@ -41,6 +41,17 @@ def delete_item(id):
     col = db['cart_' + str(id)]
     col.delete_one({'Name':name})
     return "Item got deleted successfully from the cart"
+
+
+@app.errorhandler(404)
+def not_found(e):
+    return "404- File Not Found Error Occurred"
+
+
+@app.errorhandler(500)
+def internal_server(e):
+    return "500- Internal Server Error Occurred"
+
 
 if __name__ == '__main__':
     app.run(debug=True)
